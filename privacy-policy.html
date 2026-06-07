@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Dasar Privasi Miker Group Sdn. Bhd — Kempen Makan Miker Komer Bercuti. Pematuhan Akta Perlindungan Data Peribadi (PDPA) 2010." />
+  <title>Dasar Privasi — Miker Club</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800;900&display=swap" rel="stylesheet" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            display: ['Poppins', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            indigo: { 950: '#1e1b4b' },
+            gold: {
+              light: '#fcd34d',
+              DEFAULT: '#f59e0b',
+              dark: '#d97706',
+            },
+          },
+          keyframes: {
+            shimmer: {
+              '0%':   { backgroundPosition: '-200% 0' },
+              '100%': { backgroundPosition: '200% 0' },
+            },
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', system-ui, sans-serif; }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity .65s ease, transform .65s ease;
+      will-change: opacity, transform;
+    }
+    .reveal.is-visible { opacity: 1; transform: translateY(0); }
+
+    .card-lift { transition: transform .3s ease, box-shadow .3s ease; }
+    .card-lift:hover { transform: translateY(-4px); }
+
+    .text-gold-grad {
+      background: linear-gradient(90deg, #fcd34d, #f59e0b, #fbbf24);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    /* Section number badge */
+    .section-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      height: 2rem;
+      width: 2rem;
+      border-radius: 9999px;
+      background: linear-gradient(135deg, #4338ca, #7c3aed);
+      color: #fff;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: .8rem;
+      flex-shrink: 0;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .reveal { opacity: 1 !important; transform: none !important; transition: none; }
+      .card-lift:hover { transform: none; }
+    }
+  </style>
+</head>
+
+<body class="bg-slate-50 text-slate-800 antialiased">
+
+  <!-- ===== NAV ===== -->
+  <header class="absolute top-0 inset-x-0 z-30">
+    <nav class="max-w-7xl mx-auto px-5 sm:px-8 py-5 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2 text-white font-display font-extrabold text-lg tracking-tight">
+        <span class="grid place-items-center h-9 w-9 rounded-xl bg-gradient-to-br from-amber-400 to-amber-600 text-indigo-950 text-xl shadow-lg">M</span>
+        Miker Club
+      </a>
+      <a href="index.html"
+        class="hidden sm:inline-flex items-center gap-2 rounded-full bg-white/10 backdrop-blur px-4 py-1.5 text-xs font-semibold text-amber-200 ring-1 ring-white/20 hover:bg-white/20 transition-colors">
+        ← Kembali ke Laman Utama
+      </a>
+    </nav>
+  </header>
+
+  <!-- ===== HERO BANNER ===== -->
+  <section class="relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-indigo-950 via-indigo-800 to-purple-800"></div>
+    <div aria-hidden="true" class="absolute -top-16 -right-16 h-72 w-72 rounded-full bg-amber-400/20 blur-3xl"></div>
+    <div aria-hidden="true" class="absolute -bottom-16 -left-16 h-64 w-64 rounded-full bg-purple-500/20 blur-3xl"></div>
+
+    <div class="relative max-w-4xl mx-auto px-5 sm:px-8 pt-32 pb-14 sm:pt-36 sm:pb-16">
+      <span class="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-amber-300 ring-1 ring-white/20 backdrop-blur">
+        🛡️ PDPA Malaysia — Akta 709
+      </span>
+      <h1 class="mt-5 font-display font-black text-white text-4xl sm:text-5xl leading-tight">
+        Dasar <span class="text-gold-grad">Privasi</span>
+      </h1>
+      <p class="mt-3 text-indigo-200/90 text-sm sm:text-base max-w-xl">
+        Kempen Makan Miker Komer Bercuti &mdash; Miker Group Sdn. Bhd
+      </p>
+      <div class="mt-4 flex flex-wrap gap-3">
+        <span class="rounded-full bg-white/10 px-3 py-1 text-xs text-indigo-200 ring-1 ring-white/15">
+          📅 Berkuat kuasa: 1 Jun 2026
+        </span>
+        <span class="rounded-full bg-white/10 px-3 py-1 text-xs text-indigo-200 ring-1 ring-white/15">
+          🔄 Versi 1.0
+        </span>
+      </div>
+    </div>
+
+    <div aria-hidden="true">
+      <svg class="block w-full h-10 sm:h-16 text-slate-50" viewBox="0 0 1440 64" preserveAspectRatio="none" fill="currentColor">
+        <path d="M0,32 C240,72 480,0 720,24 C960,48 1200,72 1440,32 L1440,64 L0,64 Z"></path>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ===== CONTENT ===== -->
+  <main class="py-14 sm:py-20">
+    <div class="max-w-4xl mx-auto px-5 sm:px-8 space-y-6">
+
+      <!-- Intro notice -->
+      <div class="reveal rounded-2xl bg-indigo-50 border border-indigo-200 p-6">
+        <p class="text-sm text-indigo-700 leading-relaxed">
+          <strong>Miker Group Sdn. Bhd</strong> ("Syarikat", "kami") komited untuk melindungi privasi anda selaras dengan
+          <strong>Akta Perlindungan Data Peribadi 2010 (Akta 709)</strong> dan pindaan terkininya.
+          Dasar Privasi ini menerangkan bagaimana kami mengumpul, menggunakan, mendedahkan dan melindungi
+          data peribadi anda sempena kempen <em>Makan Miker Komer Bercuti</em>.
+          <br /><br />
+          <em>Miker Group Sdn. Bhd ("the Company", "we") is committed to protecting your privacy in accordance with the
+          Personal Data Protection Act 2010 (Act 709) and its latest amendments.</em>
+        </p>
+      </div>
+
+      <!-- 1. Maklumat Pengumpul Data -->
+      <div class="reveal card-lift rounded-2xl bg-white ring-1 ring-slate-100 shadow-sm overflow-hidden">
+        <div class="bg-gradient-to-r from-indigo-600 to-purple-600 px-7 py-4 flex items-center gap-3">
+          <span class="section-badge">1</span>
+          <h2 class="font-display font-bold text-white text-lg">Maklumat Pengumpul Data</h2>
+        </div>
+        <div class="px-7 py-6 space-y-3 text-sm text-slate-600 leading-relaxed">
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div class="rounded-xl bg-slate-50 p-4 ring-1 ring-slate-100">
+              <p class="text-xs font-bold uppercase tracking-wide text-slate-400 mb-1">Nama Syarikat</p>
+              <p class="font-semibold text-slate-800">Miker Group Sdn. Bhd</p>
+            </div>
+            <div class="rounded-xl bg-slate-50 p-4 ring-1 ring-slate-100">
+              <p class="text-xs font-bold uppercase tracking-wide text-slate-400 mb-1">Kempen</p>
+              <p class="font-semibold text-slate-800">Makan Miker Komer Bercuti</p>
+            </div>
+            <div class="rounded-xl bg-slate-50 p-4 ring-1 ring-slate-100">
+              <p class="text-xs font-bold uppercase tracking-wide text-slate-400 mb-1">Tarikh Berkuat Kuasa</p>
+              <p class="font-semibold text-slate-800">1 Jun 2026</p>
+            </div>
+            <div class="rounded-xl bg-slate-50 p-4 ring-1 ring-slate-100">
+              <p class="text-xs font-bold uppercase tracking-wide text-slate-400 mb-1">Skop</p>
+              <p class="font-semibold text-slate-800">Semua outlet Miker (Food, Signature, Pizza, Putrajaya)</p>
+            </div>
+          </div>
+          <p class="italic text-xs text-slate-400 pt-1">
+            The Company is the Data User as defined under Act 709 and is responsible for the lawful collection and processing of your personal data.
+          </p>
+        </div>
+      </div>
+
+      <!-- 2. Data Yang Dikumpul -->
+      <div class="reveal card-lift rounded-2xl bg-white ring-1 ring-slate-100 shadow-sm overflow-hidden">
+        <div class="bg-gradient-to-r from-indigo-600 to-purple-600 px-7 py-4 flex items-center gap-3">
+          <span class="section-badge">2</span>
+          <h2 class="font-display font-bold text-white text-lg">Data Peribadi Yang Dikumpul</h2>
+        </div>
+        <div class="px-7 py-6 space-y-4 text-sm text-slate-600 leading-relaxed">
+          <p>Kami mungkin mengumpul data peribadi berikut apabila anda menyertai kempen ini:</p>
+          <div class="grid sm:grid-cols-2 gap-3">
+            <div class="flex items-start gap-3 rounded-xl bg-slate-50 p-4 ring-1 ring-slate-100">
+              <span class="text-xl mt-0.5">👤</span>
+              <div>
+                <p class="font-semibold text-slate-800">Nama penuh</p>
+                <p class="text-xs text-slate-400">Full name</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3 rounded-xl bg-slate-50 p-4 ring-1 ring-slate-100">
+              <span class="text-xl mt-0.5">📱</span>
+              <div>
+                <p class="font-semibold text-slate-800">Nombor telefon</p>
+                <p class="text-xs text-slate-400">Phone number</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3 rounded-xl bg-slate-50 p-4 ring-1 ring-slate-100">
+              <span class="text-xl mt-0.5">📧</span>
+              <div>
+                <p class="font-semibold text-slate-800">Alamat e-mel</p>
+                <p class="text-xs text-slate-400">Email address</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3 rounded-xl bg-slate-50 p-4 ring-1 ring-slate-100">
+              <span class="text-xl mt-0.5">🧾</span>
+              <div>
+                <p class="font-semibold text-slate-800">Nombor & butiran resit</p>
+                <p class="text-xs text-slate-400">Receipt number & details</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3 rounded-xl bg-slate-50 p-4 ring-1 ring-slate-100">
+              <span class="text-xl mt-0.5">💰</span>
+              <div>
+                <p class="font-semibold text-slate-800">Jumlah pembelian</p>
+                <p class="text-xs text-slate-400">Purchase amount</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3 rounded-xl bg-slate-50 p-4 ring-1 ring-slate-100">
+              <span class="text-xl mt-0.5">📍</span>
+              <div>
+                <p class="font-semibold text-slate-800">Outlet yang dilawati</p>
+                <p class="text-xs text-slate-400">Outlet visited</p>
+              </div>
+            </div>
+          </div>
+          <p class="text-xs text-slate-400 italic pt-1">
+            We collect only the minimum data necessary for the purpose of managing this lucky draw campaign.
+          </p>
+        </div>
+      </div>
+
+      <!-- 3. Tujuan Pemprosesan -->
+      <div class="reveal card-lift rounded-2xl bg-white ring-1 ring-slate-100 shadow-sm overflow-hidden">
+        <div class="bg-gradient-to-r from-amber-500 to-amber-600 px-7 py-4 flex items-center gap-3">
+          <span class="section-badge">3</span>
+          <h2 class="font-display font-bold text-white text-lg">Tujuan Pemprosesan Data <span class="text-xs font-normal opacity-80">(Prinsip Am)</span></h2>
+        </div>
+        <div class="px-7 py-6 space-y-3 text-sm text-slate-600 leading-relaxed">
+          <p>Data peribadi anda dikumpul dan diproses untuk tujuan berikut:</p>
+          <ul class="space-y-2 mt-2">
+            <li class="flex items-start gap-2">
+              <span class="text-emerald-500 font-bold mt-0.5">✓</span>
+              Pendaftaran dan pengurusan penyertaan cabutan bertuah
+              <em class="text-slate-400 text-xs">(Lucky draw registration and management)</em>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-emerald-500 font-bold mt-0.5">✓</span>
+              Pengesahan kelayakan penyertaan berdasarkan pembelian
+              <em class="text-slate-400 text-xs">(Eligibility verification based on purchase)</em>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-emerald-500 font-bold mt-0.5">✓</span>
+              Pengumuman dan pemberitahuan pemenang
+              <em class="text-slate-400 text-xs">(Winner announcement and notification)</em>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-emerald-500 font-bold mt-0.5">✓</span>
+              Analisis data kempen untuk penambahbaikan perkhidmatan
+              <em class="text-slate-400 text-xs">(Campaign analytics for service improvement)</em>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-emerald-500 font-bold mt-0.5">✓</span>
+              Pematuhan keperluan undang-undang dan peraturan
+              <em class="text-slate-400 text-xs">(Compliance with legal and regulatory requirements)</em>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 4. Notis & Pilihan -->
+      <div class="reveal card-lift rounded-2xl bg-white ring-1 ring-slate-100 shadow-sm overflow-hidden">
+        <div class="bg-gradient-to-r from-indigo-600 to-purple-600 px-7 py-4 flex items-center gap-3">
+          <span class="section-badge">4</span>
+          <h2 class="font-display font-bold text-white text-lg">Notis &amp; Pilihan <span class="text-xs font-normal opacity-80">(Notice & Choice Principle)</span></h2>
+        </div>
+        <div class="px-7 py-6 space-y-3 text-sm text-slate-600 leading-relaxed">
+          <p>
+            Dengan menyertai kempen <em>Makan Miker Komer Bercuti</em>, anda <strong>memberikan persetujuan</strong>
+            kepada kami untuk mengumpul dan memproses data peribadi anda bagi tujuan yang dinyatakan dalam Dasar Privasi ini.
+          </p>
+          <p>
+            <em>By participating in the campaign, you consent to the collection and processing of your personal data for the stated purposes.</em>
+          </p>
+          <div class="rounded-xl bg-amber-50 border border-amber-200 p-4 mt-3">
+            <p class="font-semibold text-amber-800 text-sm mb-1">🔄 Hak Menarik Balik Persetujuan</p>
+            <p class="text-amber-700 text-xs leading-relaxed">
+              Anda berhak menarik balik persetujuan pada bila-bila masa dengan menghubungi kami.
+              Walau bagaimanapun, penarikan balik ini mungkin menjejaskan penyertaan anda dalam kempen.
+              <br /><em>You may withdraw consent at any time by contacting us; however, withdrawal may affect your campaign participation.</em>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5. Pendedahan Data -->
+      <div class="reveal card-lift rounded-2xl bg-white ring-1 ring-slate-100 shadow-sm overflow-hidden">
+        <div class="bg-gradient-to-r from-indigo-600 to-purple-600 px-7 py-4 flex items-center gap-3">
+          <span class="section-badge">5</span>
+          <h2 class="font-display font-bold text-white text-lg">Pendedahan Data <span class="text-xs font-normal opacity-80">(Disclosure Principle)</span></h2>
+        </div>
+        <div class="px-7 py-6 space-y-3 text-sm text-slate-600 leading-relaxed">
+          <p>
+            Kami <strong>tidak akan mendedahkan</strong> data peribadi anda kepada pihak ketiga tanpa persetujuan anda,
+            kecuali dalam keadaan berikut:
+          </p>
+          <ul class="space-y-2 mt-2">
+            <li class="flex items-start gap-2">
+              <span class="text-slate-400 font-bold mt-0.5">→</span>
+              Dikehendaki oleh undang-undang atau perintah mahkamah
+              <em class="text-slate-400 text-xs">(Required by law or court order)</em>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-slate-400 font-bold mt-0.5">→</span>
+              Kepada agensi penguatkuasaan kerajaan yang berkaitan
+              <em class="text-slate-400 text-xs">(To relevant government enforcement agencies)</em>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-slate-400 font-bold mt-0.5">→</span>
+              Pembekal perkhidmatan yang dilantik semata-mata untuk tujuan kempen ini, tertakluk kepada perjanjian kerahsiaan
+              <em class="text-slate-400 text-xs">(Appointed service providers for campaign purposes only, subject to confidentiality agreements)</em>
+            </li>
+          </ul>
+          <p class="text-xs text-slate-400 italic pt-1">Data is not sold, rented, or traded to any third party for commercial purposes.</p>
+        </div>
+      </div>
+
+      <!-- 6. Keselamatan Data -->
+      <div class="reveal card-lift rounded-2xl bg-white ring-1 ring-slate-100 shadow-sm overflow-hidden">
+        <div class="bg-gradient-to-r from-emerald-500 to-teal-600 px-7 py-4 flex items-center gap-3">
+          <span class="section-badge">6</span>
+          <h2 class="font-display font-bold text-white text-lg">Keselamatan Data <span class="text-xs font-normal opacity-80">(Security Principle)</span></h2>
+        </div>
+        <div class="px-7 py-6 space-y-3 text-sm text-slate-600 leading-relaxed">
+          <p>Kami mengambil langkah-langkah praktikal yang munasabah untuk melindungi data peribadi anda daripada:</p>
+          <div class="grid sm:grid-cols-2 gap-3 mt-2">
+            <div class="flex items-center gap-2 rounded-lg bg-emerald-50 px-4 py-3 ring-1 ring-emerald-100">
+              <span class="text-emerald-600">🔒</span>
+              <span class="text-xs font-medium text-slate-700">Akses tidak dibenarkan <em class="text-slate-400">(Unauthorised access)</em></span>
+            </div>
+            <div class="flex items-center gap-2 rounded-lg bg-emerald-50 px-4 py-3 ring-1 ring-emerald-100">
+              <span class="text-emerald-600">✏️</span>
+              <span class="text-xs font-medium text-slate-700">Pengubahsuaian haram <em class="text-slate-400">(Unlawful modification)</em></span>
+            </div>
+            <div class="flex items-center gap-2 rounded-lg bg-emerald-50 px-4 py-3 ring-1 ring-emerald-100">
+              <span class="text-emerald-600">🚫</span>
+              <span class="text-xs font-medium text-slate-700">Pendedahan tanpa kebenaran <em class="text-slate-400">(Unauthorised disclosure)</em></span>
+            </div>
+            <div class="flex items-center gap-2 rounded-lg bg-emerald-50 px-4 py-3 ring-1 ring-emerald-100">
+              <span class="text-emerald-600">🗑️</span>
+              <span class="text-xs font-medium text-slate-700">Kehilangan atau kemusnahan <em class="text-slate-400">(Loss or destruction)</em></span>
+            </div>
+          </div>
+          <p class="text-xs text-slate-500 italic pt-1">
+            Langkah keselamatan termasuk kawalan akses dalaman, penyulitan data di mana bersesuaian, dan prosedur pengendalian data yang ketat.
+            <em>(Security measures include internal access controls, data encryption where appropriate, and strict data handling procedures.)</em>
+          </p>
+        </div>
+      </div>
+
+      <!-- 7. Tempoh Penyimpanan -->
+      <div class="reveal card-lift rounded-2xl bg-white ring-1 ring-slate-100 shadow-sm overflow-hidden">
+        <div class="bg-gradient-to-r from-indigo-600 to-purple-600 px-7 py-4 flex items-center gap-3">
+          <span class="section-badge">7</span>
+          <h2 class="font-display font-bold text-white text-lg">Tempoh Penyimpanan Data <span class="text-xs font-normal opacity-80">(Retention Principle)</span></h2>
+        </div>
+        <div class="px-7 py-6 space-y-3 text-sm text-slate-600 leading-relaxed">
+          <p>Data peribadi anda akan disimpan selagi ia diperlukan untuk tujuan yang dinyatakan:</p>
+          <div class="rounded-xl bg-indigo-50 border border-indigo-200 p-5 mt-2">
+            <div class="flex items-start gap-3">
+              <span class="text-2xl">📅</span>
+              <div>
+                <p class="font-semibold text-indigo-800">Tempoh Penyimpanan:</p>
+                <p class="text-sm text-indigo-700 mt-1">
+                  Sepanjang tempoh kempen <strong>+</strong> 12 bulan selepas kempen tamat, atau sehingga tuntutan berkaitan kempen diselesaikan — yang mana lebih lewat.
+                </p>
+                <p class="text-xs text-indigo-500 italic mt-1">
+                  For the campaign duration + 12 months after campaign ends, or until any campaign-related claims are resolved — whichever is later.
+                </p>
+              </div>
+            </div>
+          </div>
+          <p class="text-xs text-slate-400 italic">
+            Selepas tempoh ini, data peribadi anda akan dipadam atau dianonim dengan selamat.
+            <em>(After this period, your personal data will be securely deleted or anonymised.)</em>
+          </p>
+        </div>
+      </div>
+
+      <!-- 8. Integriti Data -->
+      <div class="reveal card-lift rounded-2xl bg-white ring-1 ring-slate-100 shadow-sm overflow-hidden">
+        <div class="bg-gradient-to-r from-indigo-600 to-purple-600 px-7 py-4 flex items-center gap-3">
+          <span class="section-badge">8</span>
+          <h2 class="font-display font-bold text-white text-lg">Integriti Data <span class="text-xs font-normal opacity-80">(Data Integrity Principle)</span></h2>
+        </div>
+        <div class="px-7 py-6 space-y-3 text-sm text-slate-600 leading-relaxed">
+          <p>
+            Kami berusaha untuk memastikan data peribadi yang kami simpan adalah <strong>tepat, lengkap, tidak mengelirukan,
+            terkini dan relevan</strong> dengan tujuan pengumpulannya.
+          </p>
+          <p class="italic text-slate-400 text-xs">
+            We endeavour to ensure that personal data held is accurate, complete, not misleading, up-to-date and relevant to the purpose of collection.
+          </p>
+          <p class="text-sm">
+            Anda digalakkan untuk memberitahu kami sekiranya terdapat sebarang perubahan pada data peribadi anda supaya rekod kami dapat dikemas kini.
+          </p>
+        </div>
+      </div>
+
+      <!-- 9. Hak Akses & Pembetulan -->
+      <div class="reveal card-lift rounded-2xl bg-white ring-1 ring-slate-100 shadow-sm overflow-hidden">
+        <div class="bg-gradient-to-r from-amber-500 to-amber-600 px-7 py-4 flex items-center gap-3">
+          <span class="section-badge">9</span>
+          <h2 class="font-display font-bold text-white text-lg">Hak Akses &amp; Pembetulan <span class="text-xs font-normal opacity-80">(Access Principle)</span></h2>
+        </div>
+        <div class="px-7 py-6 space-y-4 text-sm text-slate-600 leading-relaxed">
+          <p>Selaras dengan Akta 709, anda mempunyai hak untuk:</p>
+          <div class="space-y-3">
+            <div class="flex items-start gap-3 rounded-xl bg-amber-50 p-4 ring-1 ring-amber-100">
+              <span class="text-xl mt-0.5">👁️</span>
+              <div>
+                <p class="font-semibold text-slate-800">Hak Akses <em class="text-slate-400 font-normal text-xs">(Right to Access)</em></p>
+                <p class="text-xs text-slate-500 mt-1">Memohon akses kepada data peribadi anda yang kami simpan. / Request access to your personal data held by us.</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3 rounded-xl bg-amber-50 p-4 ring-1 ring-amber-100">
+              <span class="text-xl mt-0.5">✏️</span>
+              <div>
+                <p class="font-semibold text-slate-800">Hak Pembetulan <em class="text-slate-400 font-normal text-xs">(Right to Correction)</em></p>
+                <p class="text-xs text-slate-500 mt-1">Memohon pembetulan data peribadi yang tidak tepat atau lapuk. / Request correction of inaccurate or outdated personal data.</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3 rounded-xl bg-amber-50 p-4 ring-1 ring-amber-100">
+              <span class="text-xl mt-0.5">🚫</span>
+              <div>
+                <p class="font-semibold text-slate-800">Hak Had Pemprosesan <em class="text-slate-400 font-normal text-xs">(Right to Limit Processing)</em></p>
+                <p class="text-xs text-slate-500 mt-1">Memohon untuk mengehadkan pemprosesan data peribadi anda dalam keadaan tertentu. / Request to limit processing in certain circumstances.</p>
+              </div>
+            </div>
+          </div>
+          <div class="rounded-xl bg-slate-50 p-4 ring-1 ring-slate-200 mt-2">
+            <p class="text-xs font-bold uppercase tracking-wide text-slate-400 mb-2">Cara membuat permohonan / How to submit a request</p>
+            <p class="text-sm text-slate-700">
+              Sila hantar permintaan bertulis anda kepada Pegawai Perlindungan Data kami melalui e-mel di bawah.
+              Kami akan memproses permohonan anda dalam tempoh <strong>21 hari bekerja</strong>.
+            </p>
+            <p class="text-xs italic text-slate-400 mt-1">
+              Please submit your written request to our Data Protection Officer via email below. We will process your request within 21 working days.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 10. Hubungi Kami -->
+      <div class="reveal card-lift rounded-2xl bg-white ring-1 ring-slate-100 shadow-sm overflow-hidden">
+        <div class="bg-gradient-to-r from-emerald-500 to-teal-600 px-7 py-4 flex items-center gap-3">
+          <span class="section-badge">10</span>
+          <h2 class="font-display font-bold text-white text-lg">Aduan &amp; Hubungi Kami</h2>
+        </div>
+        <div class="px-7 py-6 space-y-4 text-sm text-slate-600 leading-relaxed">
+          <p>
+            Sekiranya anda mempunyai sebarang pertanyaan, kebimbangan atau aduan berkaitan pemprosesan data peribadi anda,
+            sila hubungi Pegawai Perlindungan Data kami:
+          </p>
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div class="rounded-xl bg-slate-50 p-4 ring-1 ring-slate-100">
+              <p class="text-xs font-bold uppercase tracking-wide text-slate-400 mb-1">Jawatan / Position</p>
+              <p class="font-semibold text-slate-800">Pegawai Perlindungan Data</p>
+              <p class="text-xs text-slate-400 italic">Data Protection Officer</p>
+            </div>
+            <div class="rounded-xl bg-slate-50 p-4 ring-1 ring-slate-100">
+              <p class="text-xs font-bold uppercase tracking-wide text-slate-400 mb-1">Syarikat / Company</p>
+              <p class="font-semibold text-slate-800">Miker Group Sdn. Bhd</p>
+            </div>
+            <div class="rounded-xl bg-slate-50 p-4 ring-1 ring-slate-100 sm:col-span-2">
+              <p class="text-xs font-bold uppercase tracking-wide text-slate-400 mb-1">E-mel / Email</p>
+              <p class="font-semibold text-indigo-600">pdpa@mikergroup.com.my</p>
+              <p class="text-xs text-slate-400 italic mt-1">*Sila gunakan subjek: "PDPA Request — [Nama Anda]"</p>
+            </div>
+          </div>
+          <div class="rounded-xl bg-indigo-50 border border-indigo-200 p-4">
+            <p class="text-xs text-indigo-700">
+              <strong>Aduan kepada Jabatan Perlindungan Data Peribadi:</strong> Anda juga berhak untuk mengemukakan aduan kepada
+              Jabatan Perlindungan Data Peribadi Malaysia (JPDP) di <strong>pdp.gov.my</strong> sekiranya anda tidak berpuas hati dengan respons kami.
+              <br /><em class="text-indigo-500">You also have the right to lodge a complaint with the Department of Personal Data Protection Malaysia (JPDP) at pdp.gov.my.</em>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 11. Pindaan Dasar -->
+      <div class="reveal card-lift rounded-2xl bg-white ring-1 ring-slate-100 shadow-sm overflow-hidden">
+        <div class="bg-gradient-to-r from-indigo-600 to-purple-600 px-7 py-4 flex items-center gap-3">
+          <span class="section-badge">11</span>
+          <h2 class="font-display font-bold text-white text-lg">Pindaan Dasar Privasi</h2>
+        </div>
+        <div class="px-7 py-6 space-y-3 text-sm text-slate-600 leading-relaxed">
+          <p>
+            Kami berhak untuk meminda Dasar Privasi ini pada bila-bila masa. Sebarang pindaan akan dikuat kuasakan
+            apabila versi terkini diterbitkan di laman web atau platform kempen kami.
+          </p>
+          <p class="italic text-xs text-slate-400">
+            We reserve the right to amend this Privacy Policy at any time. Any amendments will take effect upon publication of the latest version on our campaign platform.
+          </p>
+          <p>
+            Anda digalakkan untuk menyemak Dasar Privasi ini secara berkala. Penggunaan berterusan anda dalam kempen ini
+            selepas sebarang pindaan dianggap sebagai penerimaan anda terhadap perubahan tersebut.
+          </p>
+          <div class="flex items-center gap-3 rounded-xl bg-slate-50 p-4 ring-1 ring-slate-200 mt-2">
+            <span class="text-2xl">📋</span>
+            <div>
+              <p class="text-xs font-bold uppercase text-slate-400 tracking-wide">Versi semasa / Current Version</p>
+              <p class="font-semibold text-slate-800">Versi 1.0 — Berkuat kuasa 1 Jun 2026</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Back to top + home -->
+      <div class="reveal flex flex-col sm:flex-row items-center justify-center gap-4 pt-6 pb-2">
+        <a href="index.html"
+          class="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-indigo-600 to-purple-600 px-7 py-3 text-sm font-bold text-white shadow-lg hover:shadow-indigo-400/40 hover:-translate-y-0.5 transition-all">
+          ← Kembali ke Laman Utama
+        </a>
+        <a href="#"
+          class="inline-flex items-center gap-2 rounded-full bg-slate-100 px-7 py-3 text-sm font-semibold text-slate-600 hover:bg-slate-200 transition-colors">
+          ↑ Ke atas
+        </a>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ===== FOOTER (matching index.html) ===== -->
+  <footer class="bg-indigo-950 text-indigo-200">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 py-14">
+      <div class="flex flex-col items-center text-center gap-4">
+        <div class="flex items-center gap-2 text-white font-display font-extrabold text-xl">
+          <span class="grid place-items-center h-10 w-10 rounded-xl bg-gradient-to-br from-amber-400 to-amber-600 text-indigo-950 text-2xl shadow-lg">M</span>
+          Miker Group Sdn. Bhd
+        </div>
+        <p class="text-sm text-indigo-300/90 max-w-md">
+          Makan Miker Komer Bercuti — kempen cabutan bertuah bulanan untuk pelanggan setia kami, sempena ulang tahun Miker ke-10! 🎉
+        </p>
+        <div class="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm font-medium text-indigo-300">
+          <span>Miker Food</span>
+          <span>Miker Signature</span>
+          <span>Miker Pizza</span>
+          <span>Miker Putrajaya</span>
+        </div>
+      </div>
+
+      <div class="mt-10 border-t border-white/10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-indigo-400/80">
+        <p>© 2026 Miker Group Sdn. Bhd. Hak cipta terpelihara.</p>
+        <div class="flex items-center gap-4">
+          <p class="italic">This is a promotional campaign landing page only.</p>
+          <a href="privacy-policy.html" class="text-amber-400 hover:text-amber-300 transition-colors underline underline-offset-2">Dasar Privasi</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var els = document.querySelectorAll('.reveal');
+      if (!('IntersectionObserver' in window) ||
+          window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        els.forEach(function (el) { el.classList.add('is-visible'); });
+        return;
+      }
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
+      els.forEach(function (el) { io.observe(el); });
+    })();
+  </script>
+</body>
+</html>
