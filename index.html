@@ -108,6 +108,9 @@
 
 <body class="bg-slate-50 text-slate-800 antialiased selection:bg-amber-200/60">
 
+  <!-- Slim scroll-progress indicator -->
+  <div id="scroll-progress" class="fixed top-0 left-0 z-[60] h-1 w-0 bg-gradient-to-r from-amber-300 via-amber-500 to-amber-400 shadow-sm" style="transition: width .1s linear;"></div>
+
   <!-- ============ NAV / HEADER ============ -->
   <header class="absolute top-0 inset-x-0 z-30">
     <nav class="max-w-7xl mx-auto px-5 sm:px-8 py-5 flex items-center justify-between">
@@ -427,6 +430,23 @@
         });
       }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
       els.forEach(function (el) { io.observe(el); });
+    })();
+  </script>
+
+  <!-- Scroll-progress bar updater -->
+  <script>
+    (function () {
+      var bar = document.getElementById('scroll-progress');
+      if (!bar) return;
+      function update() {
+        var h = document.documentElement;
+        var max = h.scrollHeight - h.clientHeight;
+        bar.style.width = (max > 0 ? (h.scrollTop / max) * 100 : 0) + '%';
+      }
+      window.addEventListener('scroll', update, { passive: true });
+      window.addEventListener('resize', update);
+      window.addEventListener('load', update);
+      update();
     })();
   </script>
 </body>
